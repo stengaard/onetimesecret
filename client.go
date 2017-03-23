@@ -105,7 +105,7 @@ func (c *Client) RetrieveMetadata(metadataKey string) (Metadata, error) {
 	return m, nil
 }
 
-// RetrievesRecentMetadata fetches a list of recent metadata. c must containt Username and APIToken.
+// RetrieveRecentMetadata fetches a list of recent metadata. c must containt Username and APIToken.
 // The secret key is not present on any of the returned metadata.
 // This endpoint is documented, but does not seem to work as there is path collision with the RetrieveMetadata endpoint.
 func (c *Client) RetrieveRecentMetadata() ([]Metadata, error) {

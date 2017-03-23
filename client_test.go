@@ -51,7 +51,7 @@ func TestAPICreateSecretWithTTL(t *testing.T) {
 	defer cleanup()
 	c := getAuthedClient(t)
 
-	// Upstream seems to insists on minumum TTL of 14 days (336 hours)
+	// Upstream seems to insists on minimum TTL of 14 days (336 hours)
 	d := 14*24*time.Hour + 1*time.Minute
 
 	s, err := c.CreateSecret("abc12asdfsdf3", WithTTL(d))
