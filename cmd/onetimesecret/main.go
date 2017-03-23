@@ -1,3 +1,29 @@
+// Command onetimesecret manages secret sent through onetimesecret.com
+//
+//		Create and send secrets to friends
+//
+//		Usage:
+//		onetimesecret [command]
+//
+//		Available Commands:
+//		create      create a secret
+//		help        Help about any command
+//		inspect     View metadata about a secret
+//
+//		Flags:
+//			--apitoken string   API token for onetimesecret
+//			--cfg string        configuration file
+//			--username string   Username for onetimesecret
+//		-v, --verbose           More verbose output
+//
+//		Use "onetimesecret [command] --help" for more information about a command.
+//
+// The default path for the configuration file is ~/.onetimesecret.yaml and the schema is:
+//
+//      username: <username>
+//      apitoken: <apitoken>
+//
+// To get an API token simply signup at https://onetimesecret.com/
 package main
 
 import (
