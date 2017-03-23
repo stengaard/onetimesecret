@@ -198,7 +198,6 @@ func TestTimestamp(t *testing.T) {
 }
 
 func TestRecent(t *testing.T) {
-	t.Skip("recent endpoint does not work.")
 	c := Client{}
 	cleanup := withDebugOutput(t)
 	defer cleanup()
@@ -208,7 +207,7 @@ func TestRecent(t *testing.T) {
 		t.Fatalf("could not create secret %v", err)
 	}
 
-	ms, err := c.retrieveRecentMetadata()
+	ms, err := c.RetrieveRecentMetadata()
 	if err != nil {
 		t.Fatalf("could not fetch recent activity: %v", err)
 	}
