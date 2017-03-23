@@ -67,7 +67,11 @@ func main() {
 		viper.BindEnv("apitoken", "OTS_APITOKEN")
 
 		viper.AutomaticEnv()
-		viper.ReadInConfig()
+		err := viper.ReadInConfig()
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Error reading configuration: %v\n", err)
+			os.Exit(-1)
+		}
 	})
 
 	if err := cmd.Execute(); err != nil {
